@@ -1,0 +1,232 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text-black{
+  color: black;
+  width: 100%;
+}
+
+.component-card{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  margin: 15px 75px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 1px rgba(153, 153, 153, 0.5);
+}
+
+.cover-banner{
+  position: relative;
+  height: 250px;
+  width: 100%;
+  background-color: lightsteelblue;
+  border-radius: 30px 30px 0 0;
+}
+
+.user-img{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: lightgray;
+  left: 150px;
+  bottom: -60px;
+}
+
+.change-img{
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-radius: 50px;
+  background-color: darkgray;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.change-cover{
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  border-radius: 10px;
+  background-color: steelblue;
+  right: 20px;
+  bottom: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info-card{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 1px rgba(153, 153, 153, 0.5);
+}
+
+.flex-row{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  margin: 0 0 24px 0;
+}
+
+.form-info-pad{
+  height: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  border-radius: 0 0 30px 30px;
+  background-color: aliceblue;
+}
+
+.user-info-form{
+  width: min-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์ */
+  gap: 15px 50px; /* ระยะห่างระหว่างแต่ละอินพุต */
+  padding: 20px 150px;
+}
+
+.input-form{
+  text-align: start;
+  text-transform: uppercase;
+  border-color: gray;
+  border-width: 2px;
+  border-radius: 6px;
+}
+
+.full{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.eighty{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  grid-column: span 4;
+}
+
+.input-address{
+  text-align: start;
+  text-transform: uppercase;
+  border-color: gray;
+  border-width: 2px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.input-form:focus{
+  border-color: #007bff;
+}
+
+.head-information{
+  height: 20px;
+  width: 100%;
+  text-align: start;
+  padding:20px 20px 20px 100px;
+  text-transform: uppercase;
+}
+
+.user-contact-columns{
+  width: min-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* แบ่งเป็น 2 คอลัมน์ */
+  gap: 15px 50px; /* ระยะห่างระหว่างแต่ละอินพุต */
+  padding: 20px 150px;
+}
+
+.skill-entry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-entry span {
+  margin-right: 10px;
+}
+
+.skill-entry .power-bar-container {
+  flex-grow: 1;
+  height: 20px;
+  background-color: #e0e0e0;
+  margin-right: 10px;
+  position: relative;
+}
+.skill-entry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-entry span {
+  margin-right: 10px;
+}
+
+.skill-entry .power-bar-container {
+  flex-grow: 1;
+  height: 20px;
+  background-color: #e0e0e0;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-entry .power-bar {
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
