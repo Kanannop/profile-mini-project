@@ -23,7 +23,7 @@ function Userexp() {
     return (
       <div>
         <div className="component-card">
-          <div className="head-information">User Education</div>
+          <div className="head-information">User Experience</div>
           <div className="eighty">
             <input
               type="text"

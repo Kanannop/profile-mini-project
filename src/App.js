@@ -10,7 +10,7 @@ import Userguild from './user-guild';
 function App() {
   return (
     <div className="App">
-      <div className='text-black'>Welcome to my React App!</div>
+      <div className='text-black'>Resume Profile</div>
       <Userinfo />
       <Usercont />
       <Useredu />

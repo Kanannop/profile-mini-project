@@ -41,8 +41,9 @@ function Useredu() {
             />
             <button onClick={addEducation}>Add Education</button>
             {educations.map((education, index) => (
-              <div key={index}>
+              <div key={index} className='flex-row'>
                 <span>{education.year}</span>
+                <div className='timeline'></div>
                 <span>{education.university}</span>
                 <button onClick={() => deleteEducation(index)} style={{ marginLeft: '10px' }}>X</button>
               </div>

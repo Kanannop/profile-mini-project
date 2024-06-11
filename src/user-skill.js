@@ -25,6 +25,7 @@ function Userskill() {
       <div className="component-card">
         <div className="head-information">User Skill</div>
         <div className="eighty">
+          <div className="flex-row">
           <input
             type="text"
             name="skill"
@@ -44,6 +45,7 @@ function Userskill() {
             ))}
           </select>
           <button onClick={addSkill}>Add Skill</button>
+          </div>
           {skills.map((skill, index) => (
             <div key={index} className="skill-entry">
               <span>{skill.skill}</span>
