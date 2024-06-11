@@ -152,7 +152,6 @@
   justify-content: end;
   align-items: end;
   border-radius: 0 0 30px 30px;
-  background-color: aliceblue;
 }
 
 .user-info-form{
@@ -186,6 +185,7 @@
   align-items: center;
   flex-flow: column;
   grid-column: span 4;
+  margin-bottom: 20px;
 }
 
 .input-address{
@@ -266,7 +266,7 @@
 .power-bar-container {
   position: relative;
   width: 300px;
-  margin: 20px auto;
+  margin: 20px;
 }
 
 .power-slider {
@@ -278,4 +278,8 @@
   height: 10px;
   width: 10px;
   border-radius: 10px;
+}
+
+.bottom-pad{
+  margin: 10px 0 10px 0;
 }

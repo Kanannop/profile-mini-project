@@ -41,7 +41,7 @@ function Useredu() {
             />
             <button onClick={addEducation}>Add Education</button>
             {educations.map((education, index) => (
-              <div key={index} className='flex-row'>
+              <div key={index} className='flex-row bottom-pad'>
                 <span>{education.year}</span>
                 <div className='timeline'></div>
                 <span>{education.university}</span>

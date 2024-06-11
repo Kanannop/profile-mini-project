@@ -23,7 +23,8 @@ function Userint() {
     <div>
       <div className="component-card">
         <div className="head-information">User Interest</div>
-        <div>
+        <div className="eighty">
+          <div className='flex-row'>
           <input
             type="text"
             placeholder="Enter interest"
@@ -37,6 +38,7 @@ function Userint() {
               <button onClick={() => deleteInterest(index)}>X</button>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </div>

@@ -48,7 +48,7 @@ function Userexp() {
             />
             <button onClick={addEducation}>Add Education</button>
             {educations.map((education, index) => (
-              <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
+              <div className='bottom-pad' key={index} style={{ display: 'flex', alignItems: 'center' }}>
                 <span>{education.year}</span>
                 <span>{education.company}</span>
                 <span>{education.position}</span>
