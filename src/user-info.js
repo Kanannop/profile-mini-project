@@ -21,22 +21,40 @@ function Userinfo() {
       <div className="component-card">
         <div className="head-information">User Information</div>
         <div className="user-info-card flex-column">
-          <div className="cover-banner" style={{ backgroundImage: coverImage ? `url(${coverImage})` : "none" }}>
+          <div
+            className="cover-banner"
+            style={{
+              backgroundImage: coverImage ? `url(${coverImage})` : "none",
+            }}
+          >
             {coverImage ? null : ""}
-            <div className="user-img">
-              {profileImage ? (
-                <img src={profileImage} alt="Profile" className="profile-image" />
-              ) : (
-                ""
-              )}
-              <input
-                type="file"
-                accept="image/*"
-                id="profileImageInput"
-                onChange={handleProfileImageChange}
-                style={{ display: "none" }}
-              />
-              <button className="change-img" onClick={() => document.getElementById('profileImageInput').click()}>O</button>
+            <div className="user-img-frame">
+              <div className="user-img">
+                {profileImage ? (
+                  <img
+                    src={profileImage}
+                    alt="Profile"
+                    className="profile-image"
+                  />
+                ) : (
+                  ""
+                )}
+                <input
+                  type="file"
+                  accept="image/*"
+                  id="profileImageInput"
+                  onChange={handleProfileImageChange}
+                  style={{ display: "none" }}
+                />
+                <button
+                  className="change-img"
+                  onClick={() =>
+                    document.getElementById("profileImageInput").click()
+                  }
+                >
+                  O
+                </button>
+              </div>
             </div>
             <input
               type="file"
@@ -45,7 +63,12 @@ function Userinfo() {
               onChange={handleCoverImageChange}
               style={{ display: "none" }}
             />
-            <button className="change-cover" onClick={() => document.getElementById('coverImageInput').click()}>Change Cover</button>
+            <button
+              className="change-cover"
+              onClick={() => document.getElementById("coverImageInput").click()}
+            >
+              Change Cover
+            </button>
           </div>
           <div className="form-info-pad">
             <div className="user-info-form">
