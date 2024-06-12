@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Useredu() {
+function Useredu({defaultValues, setValue}) {
     const [educations, setEducations] = useState([]);
     const [newEducation, setNewEducation] = useState({ year: '', university: '' });
   
@@ -8,6 +8,7 @@ function Useredu() {
       if (newEducation.year && newEducation.university) {
         setEducations([...educations, newEducation]);
         setNewEducation({ year: '', university: '' });
+        setValue("education",[...educations, newEducation]);
       }
     };
   
@@ -17,7 +18,9 @@ function Useredu() {
     };
 
     const deleteEducation = (index) => {
-        setEducations(educations.filter((_, i) => i !== index));
+        const updatedEducations = educations.filter((_, i) => i !== index);
+        setEducations(updatedEducations);
+        setValue("education", updatedEducations);
       };
   
     return (

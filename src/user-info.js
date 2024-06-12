@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Controller } from "react-hook-form";
 
-function Userinfo() {
+function Userinfo({ control, defaultValues }) {
   const [profileImage, setProfileImage] = useState(null);
   const [coverImage, setCoverImage] = useState(null);
 
@@ -74,40 +75,84 @@ function Userinfo() {
             <div className="user-info-form">
               <div className="input-form">
                 <div>Username</div>
-                <input></input>
+                <Controller
+                  name="username"
+                  control={control}
+                  defaultValue={defaultValues.information.username || ""}
+                  render={({ field }) => <input {...field} />}
+                />
               </div>
               <div className="input-form">
                 <div>Nickname</div>
-                <input></input>
+                <Controller
+                  name="nickname"
+                  control={control}
+                  defaultValue={defaultValues.information.nickname || ""}
+                  render={({ field }) => <input {...field} />}
+                />
               </div>
               <div className="input-form">
                 <div>First name</div>
-                <input></input>
+                <Controller
+                  name="firstname"
+                  control={control}
+                  defaultValue={defaultValues.information.firstname || ""}
+                  render={({ field }) => <input {...field} />}
+                />
               </div>
               <div className="input-form">
                 <div>Last name</div>
-                <input></input>
+                <Controller
+                  name="lastname"
+                  control={control}
+                  defaultValue={defaultValues.information.lastname || ""}
+                  render={({ field }) => <input {...field} />}
+                />
               </div>
               <div className="input-address">
                 <div className="input-label">Position</div>
-                <select className="full">
-                  <option value="district"></option>
-                  <option value="district1">Position 1</option>
-                  <option value="district2">Position 2</option>
-                  <option value="district3">Position 3</option>
-                </select>
+                <Controller
+                  name="positionOption"
+                  control={control}
+                  defaultValue={defaultValues.information.positionOption || ""}
+                  render={({ field }) => (
+                    <select {...field} className="full">
+                      <option value=""></option>
+                      <option value="Position 1">Position 1</option>
+                      <option value="Position 2">Position 2</option>
+                      <option value="Position 3">Position 3</option>
+                    </select>
+                  )}
+                />
               </div>
               <div className="input-form">
                 <div>Nationality</div>
-                <input></input>
+                <Controller
+                  name="nationality"
+                  control={control}
+                  defaultValue={defaultValues.information.nationality || ""}
+                  render={({ field }) => <input {...field} />}
+                />
               </div>
               <div className="input-form">
                 <div>Telephone number</div>
-                <input></input>
+                <Controller
+                  name="telephoneNumber"
+                  control={control}
+                  defaultValue={defaultValues.information.telephoneNumber || ""}
+                  render={({ field }) => <input {...field} />}
+                />
               </div>
               <div className="input-form">
                 <div>Starting date</div>
-                <input className="full" type="date"></input>
+                <Controller
+                  name="startingDate"
+                  control={control}
+                  defaultValue={defaultValues.information.startingDate || ""}
+                  render={({ field }) => (
+                    <input {...field} className="full" type="date" />
+                  )}
+                />
               </div>
             </div>
           </div>
